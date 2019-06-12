@@ -1,29 +1,24 @@
 #include<stdio.h>
-#include<conio.h>
 void main()
-{  clrscr();
-   double a,b,result=0;
-   int choice;
-   printf("Enter two numbers: ");
-   scanf("%lf%lf", &a,&b);
-   printf("Enter your choice(1-4): ");
-   printf("\n1 for Addition.\n2 for Subtraction.\n3 for Multiplication.");
-   printf("\n4 for Division.\n");
-   scanf("%d",&choice);
-   switch(choice){
+{
+int a, b, result;
+int choice;
+result = 0;
+printf("Enter two numbers");
+scanf("%d%d", &a,&b);
+printf("Enter your choice: \n 1 for adition\n 2 for subtraction\n 3 for multiplication");
+scanf("%d", &choice);
+switch(choice){
 case 1: result = a+b;
-	printf("\nThe sum of %lf and %lf is: %lf",a,b,result);
+	printf("The sum of %d and %d is: %d",a,b,result);
 	break;
-case 2: result = a-b;
-	printf("\nThe difference of %lf and %lf is: %lf",a,b,result);
+case 2: result = a-b; 
+	printf("The difference of %d and %d is: %d",a,b,result);
 	break;
 case 3: result = a*b;
-	printf("\nThe product of %lf and %lf is: %lf",a,b,result);
-	break;
-case 4: result = a/b;
-	printf("\nThe quotient of %lf and %lf is: %lf",a,b,result);
-	break;
+        printf("The multiplication of %d and %d is:%d",a,b,result);
+        break;
 default:"invalid choice";
 }
-getch();
 }
+
